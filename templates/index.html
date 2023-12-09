@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xinyue's FlaskApp</title>
+</head>
+<body>
+    <h1>Most recent record:</h1>
+    <h2>datetime: {{latest_record.datetime}}, status_code={{latest_record.status_code}}, endpoint={{latest_record.endpoint}}</h2>
+    <h1>All historical records:</h1>
+    {% for record in records %}
+        <div class="record">
+            <p>datetime: {{ record.datetime }}</p>
+            <p>status_code: {{ record.status_code }}</p>
+            <p>endpoint: {{ record.endpoint }}</p>
+            <p>------</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
